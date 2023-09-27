@@ -1,3 +1,4 @@
+
 const express = require('express');
 let books = require("./booksdb.js");
 let isValid = require("./auth_users.js").isValid;
@@ -13,7 +14,7 @@ public_users.post("/register", (req,res) => {
 
     if (!isValid(username)) {
       users.push({"username":username,"password":password});
-      return res.status(200).json{message: "Customer succesfully registered. Now you can login"});
+      return res.status(200).json({message: "Customer succesfully registered. Now you can login"});
     } else {
       return res.status(404).json({message: "Customer with same username already exists!"});
     }
