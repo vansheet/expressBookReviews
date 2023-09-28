@@ -14,6 +14,7 @@ const isValid = (username)=>{ //returns boolean
   } else {
     return false;
   }
+}
 
 const authenticatedUser = (username,password)=>{ //returns boolean
     let validUser = users.filter((user)=>{
